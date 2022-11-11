@@ -14,6 +14,6 @@ public class Camera : MonoBehaviour
     void Update()
     {
         Vector3 playerPos = GameManager.instance.Player.transform.position;
-        transform.position = new Vector3(playerPos.x+5, playerPos.y, transform.position.z);
+        transform.position = new Vector3(playerPos.x+5, playerPos.y+3, transform.position.z);
     }
 }
