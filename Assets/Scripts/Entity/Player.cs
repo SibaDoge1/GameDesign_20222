@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     {
         Vector2 nextMove = new Vector2();
         float horizental = Input.GetAxis("Horizontal");
-        transform.Translate(Vector2.right * horizental * Time.deltaTime * MoveConst, Space.World);
+        _rigid.MovePosition(_rigid.position + Vector3.right * horizental * Time.deltaTime * MoveConst);
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
