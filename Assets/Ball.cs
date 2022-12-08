@@ -28,6 +28,7 @@ public class Ball : MonoBehaviour
     
     void Update()
     {
+        if (GameManager.instance.isEnd) return;
         if (Input.GetMouseButtonDown(0) && isForceOk)
         {
             isMouseHolding = true;
@@ -62,6 +63,7 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (GameManager.instance.isEnd) return;
         _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, maxSpeed);
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,7 +20,9 @@ public class GameManager : MonoBehaviour
     private GameObject spawnPoint;
     
     [SerializeField]
-    private GameObject optionPanel;
+    private GameObject successPanel;
+    [SerializeField]
+    private GameObject failPanel;
     [SerializeField]
     private GameObject loadingPanel;
     
@@ -29,6 +32,8 @@ public class GameManager : MonoBehaviour
     private AudioSource failSound;
     [SerializeField]
     private AudioSource spawnSound;
+
+    public bool isEnd;
     
 
     
@@ -54,8 +59,8 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("r"))
         {
             spawnSound.Play();
+            GameObject.Destroy(ball.gameObject);
             GameObject newBall = Instantiate(ballPrefab, spawnPoint.transform.position, Quaternion.identity, ball.transform.parent);
-            GameObject.Destroy(ball);
             ball = newBall.GetComponent<Ball>();
             spawnSound.Play();
         }
@@ -63,14 +68,23 @@ public class GameManager : MonoBehaviour
 
     public void onSuccess()
     {
+        isEnd = true;
         successSound.Play();
-        optionPanel.SetActive(true);
+        successPanel.SetActive(true);
     }
 
     public void onFail()
     {
+        isEnd = true;
         failSound.Play();
+        failPanel.SetActive(true);
     }
+    
+    public void onRestartClicked()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 
     public void onTitleClicked()
     {

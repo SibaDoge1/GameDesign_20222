@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.instance.isEnd) return;
         Vector2 nextMove = new Vector2();
         float horizental = Input.GetAxis("Horizontal");
         rigid.MovePosition(rigid.position + Vector3.right * horizental * Time.deltaTime * MoveConst);

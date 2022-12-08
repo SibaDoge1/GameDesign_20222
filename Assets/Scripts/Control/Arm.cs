@@ -21,12 +21,14 @@ public class Arm : MonoBehaviour
 
     private void Update()
     {        
+        if (GameManager.instance.isEnd) return;
         transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.LookRotation(lookPos- transform.position,Vector3.back), 720f*Time.deltaTime);
         fakeRacket.position = getClampedVector(lookPos, minPoint.position, maxPoint.position);
         test.position = lookPos;
     }
     private void FixedUpdate()
     {
+        if (GameManager.instance.isEnd) return;
         Vector3 screenPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -UnityEngine.Camera.main.transform.position.z);
         Vector3 worldPos =  UnityEngine.Camera.main.ScreenToWorldPoint(screenPos);
         lookPos = new Vector3(worldPos.x, worldPos.y, transform.position.z);
