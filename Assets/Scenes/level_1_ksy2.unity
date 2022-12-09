@@ -1617,6 +1617,7 @@ MonoBehaviour:
   successSound: {fileID: 1868179716}
   failSound: {fileID: 1705983117}
   spawnSound: {fileID: 1025048884}
+  isEnd: 0
 --- !u!4 &191446254
 Transform:
   m_ObjectHideFlags: 0
@@ -1817,7 +1818,7 @@ GameObject:
   - component: {fileID: 354315703}
   m_Layer: 0
   m_Name: stair_3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1830,8 +1831,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354315701}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.79, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 0.53691, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1580095730}
@@ -1844,7 +1845,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354315701}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df7f5bc29ab862d4c84ad35595ecec1f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2740,7 +2741,7 @@ GameObject:
   - component: {fileID: 1073190458}
   m_Layer: 0
   m_Name: stair_5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2767,7 +2768,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073190456}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df7f5bc29ab862d4c84ad35595ecec1f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -4678,22 +4679,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 951842117}
     m_Modifications:
-    - target: {fileID: 871962454, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
-      propertyPath: m_TagString
-      value: Racket
-      objectReference: {fileID: 0}
-    - target: {fileID: 871962459, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
-      propertyPath: m_Mass
-      value: 0.000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1292782714, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
-      propertyPath: m_Mass
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5091242708998600766, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: f1f877236e0569a448907804df6b7f2c, type: 2}
     - target: {fileID: 5091242709008108106, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
       propertyPath: m_Name
       value: Chr_Zcharacter_01
@@ -4708,7 +4693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5091242709008406442, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.148
       objectReference: {fileID: 0}
     - target: {fileID: 5091242709008406442, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4854,7 +4839,7 @@ GameObject:
   - component: {fileID: 1386496051}
   m_Layer: 0
   m_Name: stair_7
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4881,11 +4866,11 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386496049}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df7f5bc29ab862d4c84ad35595ecec1f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.95, y: 0.95, z: 0.95}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1386496052
 MeshRenderer:
@@ -5171,7 +5156,7 @@ GameObject:
   - component: {fileID: 1600474768}
   m_Layer: 0
   m_Name: stair_6
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5198,7 +5183,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600474766}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df7f5bc29ab862d4c84ad35595ecec1f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -5268,7 +5253,7 @@ GameObject:
   - component: {fileID: 1627013288}
   m_Layer: 0
   m_Name: stair_2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5281,8 +5266,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627013286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.53, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 0.57765, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1580095730}
@@ -5295,7 +5280,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627013286}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df7f5bc29ab862d4c84ad35595ecec1f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -5522,7 +5507,7 @@ GameObject:
   - component: {fileID: 1673481433}
   m_Layer: 0
   m_Name: stair_1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5536,7 +5521,7 @@ Transform:
   m_GameObject: {fileID: 1673481431}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.65272, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1580095730}
@@ -5549,7 +5534,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673481431}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df7f5bc29ab862d4c84ad35595ecec1f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -5747,7 +5732,7 @@ GameObject:
   - component: {fileID: 1707805943}
   m_Layer: 0
   m_Name: stair_4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5760,7 +5745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707805941}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 3, z: 0}
+  m_LocalPosition: {x: 8.12, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5774,7 +5759,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707805941}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df7f5bc29ab862d4c84ad35595ecec1f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

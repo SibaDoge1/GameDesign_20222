@@ -5,10 +5,14 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] private float maxSpeed = 50;
+    [SerializeField] private float maxSpeed = 5;
     [SerializeField] private float forceConst = 250f;
     [SerializeField] private float maxForce = 2.0f;
 
+ 
+    public float gravityScale = 1.0f;
+    public static float globalGravity = -9.81f;
+    
     private bool isForceOk;
 
     private Rigidbody _rigidbody;
@@ -23,6 +27,7 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isForceOk = true;
         _rigidbody = transform.GetComponent<Rigidbody>();
     }
     
@@ -63,6 +68,8 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Vector3 gravity = globalGravity * gravityScale * Vector3.up;
+        _rigidbody.AddForce(gravity, ForceMode.Acceleration);
         if (GameManager.instance.isEnd) return;
         _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, maxSpeed);
     }

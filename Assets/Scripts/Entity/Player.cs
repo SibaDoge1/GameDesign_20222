@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private const float MoveConst = 1.25f;
-    private const float JumpConst = 75.0f;
+    [SerializeField]
+    private float MoveConst = 5.25f;
+    [SerializeField]
+    private float JumpConst = 150.0f;
     private Rigidbody rigid;
     private bool isGrounded = false;
     private bool isSpacePressed = false;
-    private Animator animator; 
+    private Animator animator;
+    private float horizental;
     
     // Start is called before the first frame update
     void Awake()
@@ -24,17 +27,12 @@ public class Player : MonoBehaviour
     {
         if (GameManager.instance.isEnd) return;
         Vector2 nextMove = new Vector2();
-        float horizental = Input.GetAxis("Horizontal");
-        rigid.MovePosition(rigid.position + Vector3.right * horizental * Time.deltaTime * MoveConst);
+        horizental = Input.GetAxis("Horizontal");
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StopCoroutine("JumpTimer");
             StartCoroutine("JumpTimer");
-        }
-        if (isSpacePressed && isGrounded)
-        {
-            Jump();
         }
 
         if (Input.GetAxis("Horizontal") != 0)
@@ -47,14 +45,25 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        
+        if (isSpacePressed && isGrounded)
+        {
+            Jump();
+        }
+        if(horizental != 0)
+            rigid.MovePosition(transform.position+Vector3.right * horizental * Time.fixedDeltaTime * MoveConst);
+    }
+
     private void Jump()
     {
-        rigid.AddForce(Vector2.up * JumpConst*rigid.mass);
+        rigid.AddForce(Vector3.up * JumpConst*rigid.mass);
         StopCoroutine("JumpTimer");
         isSpacePressed = false;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionStay(Collision other)
     {
         if (other.transform.CompareTag("Ground"))
         {
