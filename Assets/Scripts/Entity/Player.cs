@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private const float MoveConst = 1.25f;
-    private const float JumpConst = 150.0f;
+    private const float JumpConst = 75.0f;
     private Rigidbody rigid;
     private bool isGrounded = false;
     private bool isSpacePressed = false;
