@@ -24,6 +24,8 @@ public class Ball : MonoBehaviour
     [SerializeField] private AudioSource forceAudio;
     private LineRenderer line;
     [SerializeField] private GameObject linePrefab;
+    [SerializeField]
+    private GameObject hitEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,6 +84,7 @@ public class Ball : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         hitAudio.Play();
+        Instantiate(hitEffect, transform.position, transform.rotation);
         if (other.gameObject.CompareTag("Racket"))
         {
             isForceOk = true;

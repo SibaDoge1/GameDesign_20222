@@ -23,8 +23,8 @@ public class Effect : MonoBehaviour
     {
         if (other.transform.CompareTag("Ground"))
         {
-            Instantiate(hitEffect, transform.position, transform.rotation);
-            Debug.Log("hit the ground");
+            //Instantiate(hitEffect, transform.position, transform.rotation);
+            //Debug.Log("hit the ground");
         }
     }
 }
