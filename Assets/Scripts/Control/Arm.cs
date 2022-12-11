@@ -8,7 +8,7 @@ public class Arm : MonoBehaviour
     //[SerializeField] private Transform realArm;
     [SerializeField] private Rigidbody racketRigid;
     [SerializeField] private Transform fakeRacket;
-    [SerializeField] private Transform test;
+    //[SerializeField] private Transform test;
     [SerializeField] private Transform maxPoint;
     [SerializeField] private Transform minPoint;
     private Vector3 lookPos;
