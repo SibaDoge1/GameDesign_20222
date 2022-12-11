@@ -14,6 +14,7 @@ public class Health : MonoBehaviour
     public AudioClip deathClip;
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+    public GameObject Player;
 
     private AudioSource playerAudio;
 
@@ -46,7 +47,7 @@ public class Health : MonoBehaviour
     {
         if (other.transform.CompareTag("Ground")&&!isDead)
         {
-            TakeDamage(1);
+            TakeDamage(2);
         }
     }
 
@@ -70,6 +71,7 @@ public class Health : MonoBehaviour
 
         playerAudio.clip = deathClip;
         playerAudio.Play();
+        //RestartLevel();
     }
 
     public void RestartLevel()

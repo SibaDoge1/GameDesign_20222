@@ -14,7 +14,9 @@ public class Player : MonoBehaviour
     private bool isSpacePressed = false;
     private Animator animator;
     private float horizental;
-    
+    [SerializeField]
+    private AudioSource jumpAudio;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -58,6 +60,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
+        jumpAudio.Play();
         rigid.AddForce(Vector3.up * JumpConst*rigid.mass);
         StopCoroutine("JumpTimer");
         isSpacePressed = false;
