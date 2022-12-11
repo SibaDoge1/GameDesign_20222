@@ -17,7 +17,11 @@ public class Player : MonoBehaviour
     private float horizental;
     [SerializeField]
     private AudioSource jumpAudio;
-
+    [SerializeField]
+    private GameObject deathEffect;
+    [SerializeField]
+    private GameObject ball;
+    [SerializeField] private AudioSource explosion;
     private bool isOnThorn;
     private bool isInFire;
     // Start is called before the first frame update
@@ -69,19 +73,24 @@ public class Player : MonoBehaviour
         StopCoroutine("JumpTimer");
         isSpacePressed = false;
     }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.CompareTag("Fire") || other.transform.CompareTag("Thorn"))
+        {
+            die();
+        }
+    }
 
     private void OnCollisionStay(Collision other)
     {
         if (other.transform.CompareTag("Ground"))
         {
+            Debug.Log("ground");
             isGrounded = true;
             if(isSpacePressed)
                 Jump();
         }
-        else if (other.transform.CompareTag("Fire") || other.transform.CompareTag("Thorn"))
-        {
-            die(); // �״´�
-        }
+
     }
     
     private void OnCollisionExit(Collision other)
@@ -90,9 +99,14 @@ public class Player : MonoBehaviour
             isGrounded = false;
     }
 
-    public void die()//���� ����Ʈ
+    public void die()
     {
+        explosion.Play();
+        Instantiate(deathEffect, transform.position, transform.rotation);
+        Instantiate(deathEffect, ball.transform.position, ball.transform.rotation);
         animator.Play("death");
+        Destroy(ball);
+        GameManager.instance.onFail();
     }
 
     private IEnumerator JumpTimer()

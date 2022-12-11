@@ -58,11 +58,12 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown("r"))
         {
-            spawnSound.Play();
+            onRestartClicked();
+            /*spawnSound.Play();
             GameObject.Destroy(ball.gameObject);
             GameObject newBall = Instantiate(ballPrefab, spawnPoint.transform.position, Quaternion.identity, ball.transform.parent);
             ball = newBall.GetComponent<Ball>();
-            spawnSound.Play();
+            spawnSound.Play();*/
         }
     }
 

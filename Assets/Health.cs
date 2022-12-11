@@ -16,18 +16,23 @@ public class Health : MonoBehaviour
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
     private AudioSource playerAudio;
+    [SerializeField]private GameObject deathEffect;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject ball;
+    [SerializeField] private AudioSource explosion;
 
     private bool isDead;
     private bool damaged;
+    private Animator animator;
 
 
     // Start is called before the first frame update
     void Start()
     {
         playerAudio = GetComponent<AudioSource>();
-
         currentHealth = startingHealth;
-        
+        animator = player.GetComponent<Animator>();
+
     }
     // Update is called once per frame
     void Update()
@@ -70,15 +75,16 @@ public class Health : MonoBehaviour
     void Death()
     {
         isDead = true;
-
+        explosion.Play();
+        Instantiate(deathEffect, transform.position, transform.rotation);
+        Instantiate(deathEffect, player.transform.position, player.transform.rotation);
+        animator.Play("death");
+        //Destroy(player);
+        Destroy(ball);
+        GameManager.instance.onFail();
+        
         playerAudio.clip = deathClip;
         playerAudio.Play();
-        //RestartLevel();
-    }
-
-    public void RestartLevel()
-    {
-        SceneManager.LoadScene(0);
     }
 
 }
