@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
     private float horizental;
     private bool isInFire;
     private bool isOnThorn;
-    
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -75,7 +76,8 @@ public class Player : MonoBehaviour
         }
         else if (other.transform.CompareTag("Fire") || other.transform.CompareTag("Thorn"))
         {
-            die(); // Á×´Â´Ù
+            GameManager.instance.onFail();
+            die();
         }
     }
     

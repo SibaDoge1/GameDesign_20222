@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    
+    // 싱글턴
     public static GameManager instance;
     [SerializeField]
     private Player player;
@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // 다시 게임 시작
         if (Input.GetKeyDown("r"))
         {
             spawnSound.Play();
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // 성공했을 때 호출
     public void onSuccess()
     {
         isEnd = true;
@@ -73,12 +75,14 @@ public class GameManager : MonoBehaviour
         successPanel.SetActive(true);
     }
 
+    // 실패했을 때 호출
     public void onFail()
     {
         isEnd = true;
         failSound.Play();
         failPanel.SetActive(true);
     }
+    
     
     public void onRestartClicked()
     {
