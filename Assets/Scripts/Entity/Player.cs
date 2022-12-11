@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
             isGrounded = false;
     }
 
-    public void die()
+    public void die()//Æø¹ß ÀÌÆåÆ®
     {
         animator.Play("death");
     }

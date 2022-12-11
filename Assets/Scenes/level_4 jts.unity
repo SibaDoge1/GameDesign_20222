@@ -3818,6 +3818,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5314055643569455265, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5051172793049860571, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
@@ -8505,7 +8509,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 57231617c3a5c994f9b67caed12c67bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 367005cc0d64ba4408c1d9bac7431772, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9221,7 +9225,7 @@ PrefabInstance:
     - target: {fileID: 1730256026080813452, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: hitEffect
       value: 
-      objectReference: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
+      objectReference: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
     - target: {fileID: 6295394791236261756, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_IsTrigger
       value: 0

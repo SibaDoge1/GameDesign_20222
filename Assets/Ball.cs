@@ -85,9 +85,13 @@ public class Ball : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Racket"))
         {
+            isForceOk = true;
+        }
+
+        if (other.gameObject.CompareTag("Racket") || other.gameObject.CompareTag("Ground"))
+        {
             hitAudio.Play();
             Instantiate(hitEffect, transform.position, transform.rotation);
-            isForceOk = true;
         }
     }
 }
