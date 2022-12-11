@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Racket
   - Ball
+  - FxTemporaire
+  - Thorn
+  - Fire
   layers:
   - Default
   - TransparentFX
