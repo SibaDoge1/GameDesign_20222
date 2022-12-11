@@ -83,10 +83,10 @@ public class Ball : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        hitAudio.Play();
-        Instantiate(hitEffect, transform.position, transform.rotation);
         if (other.gameObject.CompareTag("Racket"))
         {
+            hitAudio.Play();
+            Instantiate(hitEffect, transform.position, transform.rotation);
             isForceOk = true;
         }
     }

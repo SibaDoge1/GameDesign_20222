@@ -42,11 +42,27 @@ public class Health : MonoBehaviour
         }
         damaged = false;
     }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.CompareTag("Ground") && !isDead)
+        {
+            playerAudio.Play();
+        }
+    }
+
     private void OnCollisionStay(Collision other)
     {
         if (other.transform.CompareTag("Ground")&&!isDead)
         {
-            TakeDamage(2);
+            TakeDamage(1);
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.transform.CompareTag("Ground") && !isDead)
+        {
+            playerAudio.Stop();
         }
     }
 
