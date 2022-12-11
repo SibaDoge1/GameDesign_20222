@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -8,7 +9,6 @@ public class Ball : MonoBehaviour
     [SerializeField] private float maxSpeed = 5;
     [SerializeField] private float forceConst = 250f;
     [SerializeField] private float maxForce = 2.0f;
-
  
     public float gravityScale = 1.0f;
     public static float globalGravity = -9.81f;
@@ -90,6 +90,10 @@ public class Ball : MonoBehaviour
         {
             isForceOk = true;
         }
+        if (other.gameObject.CompareTag("House"))
+        {
+            GameManager.instance.onSuccess();
+        }
 
         if (other.gameObject.CompareTag("Racket") || other.gameObject.CompareTag("Ground"))
         {
@@ -97,4 +101,13 @@ public class Ball : MonoBehaviour
             Instantiate(hitEffect, transform.position, transform.rotation);
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.CompareTag("Fan Wind"))
+        {
+            _rigidbody.AddForce(new Vector3(-7,0,0));
+        }
+    }
+    
 }

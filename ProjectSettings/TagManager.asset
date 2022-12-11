@@ -10,6 +10,10 @@ TagManager:
   - FxTemporaire
   - Thorn
   - Fire
+  - Water
+  - Fan Blade
+  - House
+  - Fan Wind
   layers:
   - Default
   - TransparentFX

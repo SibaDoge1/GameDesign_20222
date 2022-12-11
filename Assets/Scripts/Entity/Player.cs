@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioSource explosion;
     private bool isOnThorn;
     private bool isInFire;
+    private bool isOnThorn;
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -90,7 +93,11 @@ public class Player : MonoBehaviour
             if(isSpacePressed)
                 Jump();
         }
-
+        else if (other.transform.CompareTag("Fire") || other.transform.CompareTag("Thorn"))
+        {
+            GameManager.instance.onFail();
+            die();
+        }
     }
     
     private void OnCollisionExit(Collision other)
