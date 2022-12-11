@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private bool isSpacePressed = false;
     private Animator animator;
     private float horizental;
+    private bool isInFire;
+    private bool isOnThorn;
     
     // Start is called before the first frame update
     void Awake()
@@ -70,6 +72,10 @@ public class Player : MonoBehaviour
             isGrounded = true;
             if(isSpacePressed)
                 Jump();
+        }
+        else if (other.transform.CompareTag("Fire") || other.transform.CompareTag("Thorn"))
+        {
+            die(); // Á×´Â´Ù
         }
     }
     
