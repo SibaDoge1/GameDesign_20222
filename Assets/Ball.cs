@@ -81,6 +81,7 @@ public class Ball : MonoBehaviour
     {
         GameManager.instance.onFail();
         animator.Play("death");
+        GameManager.instance.onFail();
     }
     
     private void OnCollisionEnter(Collision other)

@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     private GameObject failPanel;
     [SerializeField]
     private GameObject loadingPanel;
+    [SerializeField]
+    private GameObject optionPanel;
     
     [SerializeField]
     private AudioSource successSound;
@@ -65,6 +67,11 @@ public class GameManager : MonoBehaviour
             ball = newBall.GetComponent<Ball>();
             spawnSound.Play();*/
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0;
+            optionPanel.SetActive(true);
+        }
     }
 
     public void onSuccess()
@@ -84,6 +91,11 @@ public class GameManager : MonoBehaviour
     public void onRestartClicked()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void onResumeClicked()
+    {
+        Time.timeScale = 1;
+        optionPanel.SetActive(false);
     }
 
 
