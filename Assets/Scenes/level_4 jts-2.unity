@@ -1011,6 +1011,7 @@ MonoBehaviour:
   successPanel: {fileID: 721426661}
   failPanel: {fileID: 872179649}
   loadingPanel: {fileID: 876666074}
+  optionPanel: {fileID: 0}
   successSound: {fileID: 1111928375}
   failSound: {fileID: 340402425}
   spawnSound: {fileID: 1686434290}
@@ -10372,6 +10373,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 13260000}
     m_Modifications:
+    - target: {fileID: 1798722239, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 313803581}
+    - target: {fileID: 1798722239, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 1189352451}
     - target: {fileID: 1730256026080813452, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: hitEffect
       value: 
@@ -10424,7 +10433,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1798722239, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
 --- !u!1 &1798722237 stripped
 GameObject:
@@ -10454,102 +10464,6 @@ MonoBehaviour:
   player: {fileID: 313803581}
   ball: {fileID: 1798722237}
   explosion: {fileID: 1189352451}
---- !u!82 &1798722244
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798722237}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 367005cc0d64ba4408c1d9bac7431772, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &1822657459
 PrefabInstance:
   m_ObjectHideFlags: 0
