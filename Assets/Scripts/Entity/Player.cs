@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private AudioSource jumpAudio;
 
+    private bool isOnThorn;
+    private bool isInFire;
     // Start is called before the first frame update
     void Awake()
     {
@@ -76,6 +78,10 @@ public class Player : MonoBehaviour
             if(isSpacePressed)
                 Jump();
         }
+        else if (other.transform.CompareTag("Fire") || other.transform.CompareTag("Thorn"))
+        {
+            die(); // ï¿½×´Â´ï¿½
+        }
     }
     
     private void OnCollisionExit(Collision other)
@@ -84,7 +90,7 @@ public class Player : MonoBehaviour
             isGrounded = false;
     }
 
-    public void die()//Æø¹ß ÀÌÆåÆ®
+    public void die()//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
     {
         animator.Play("death");
     }
