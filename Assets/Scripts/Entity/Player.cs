@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -14,9 +15,15 @@ public class Player : MonoBehaviour
     private bool isSpacePressed = false;
     private Animator animator;
     private float horizental;
-    private bool isInFire;
+    [SerializeField]
+    private AudioSource jumpAudio;
+    [SerializeField]
+    private GameObject deathEffect;
+    [SerializeField]
+    private GameObject ball;
+    [SerializeField] private AudioSource explosion;
     private bool isOnThorn;
-    
+    private bool isInFire;
     // Start is called before the first frame update
     void Awake()
     {
@@ -41,6 +48,7 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("isMoving", true);
         }
+
         else
         {
             animator.SetBool("isMoving", false);
@@ -60,23 +68,29 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
+        jumpAudio.Play();
         rigid.AddForce(Vector3.up * JumpConst*rigid.mass);
         StopCoroutine("JumpTimer");
         isSpacePressed = false;
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.CompareTag("Fire") || other.transform.CompareTag("Thorn"))
+        {
+            die();
+        }
     }
 
     private void OnCollisionStay(Collision other)
     {
         if (other.transform.CompareTag("Ground"))
         {
+            Debug.Log("ground");
             isGrounded = true;
             if(isSpacePressed)
                 Jump();
         }
-        else if (other.transform.CompareTag("Fire") || other.transform.CompareTag("Thorn"))
-        {
-            die(); // Á×´Â´Ù
-        }
+
     }
     
     private void OnCollisionExit(Collision other)
@@ -87,7 +101,12 @@ public class Player : MonoBehaviour
 
     public void die()
     {
+        explosion.Play();
+        Instantiate(deathEffect, transform.position, transform.rotation);
+        Instantiate(deathEffect, ball.transform.position, ball.transform.rotation);
         animator.Play("death");
+        Destroy(ball);
+        GameManager.instance.onFail();
     }
 
     private IEnumerator JumpTimer()

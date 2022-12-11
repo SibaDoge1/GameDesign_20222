@@ -22,8 +22,11 @@ public class Ball : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource hitAudio;
     [SerializeField] private AudioSource forceAudio;
+    [SerializeField] private AudioSource explosion;
     private LineRenderer line;
     [SerializeField] private GameObject linePrefab;
+    [SerializeField]
+    private GameObject hitEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -76,15 +79,21 @@ public class Ball : MonoBehaviour
 
     public void die()
     {
+        GameManager.instance.onFail();
         animator.Play("death");
     }
     
     private void OnCollisionEnter(Collision other)
     {
-        hitAudio.Play();
         if (other.gameObject.CompareTag("Racket"))
         {
             isForceOk = true;
+        }
+
+        if (other.gameObject.CompareTag("Racket") || other.gameObject.CompareTag("Ground"))
+        {
+            hitAudio.Play();
+            Instantiate(hitEffect, transform.position, transform.rotation);
         }
     }
 }

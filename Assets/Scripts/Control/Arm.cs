@@ -24,7 +24,7 @@ public class Arm : MonoBehaviour
         if (GameManager.instance.isEnd) return;
         transform.rotation = Quaternion.RotateTowards(transform.rotation,Quaternion.LookRotation(lookPos- transform.position,Vector3.back), 1080f*Time.deltaTime);
         fakeRacket.position = getClampedVector(lookPos, minPoint.position, maxPoint.position);
-        test.position = lookPos;
+        //test.position = lookPos;
     }
     private void FixedUpdate()
     {
