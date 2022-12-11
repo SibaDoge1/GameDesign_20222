@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioSource explosion;
     private bool isOnThorn;
     private bool isInFire;
-    private bool isOnThorn;
 
 
     // Start is called before the first frame update
@@ -108,12 +107,13 @@ public class Player : MonoBehaviour
 
     public void die()
     {
+        if (GameManager.instance.isEnd) return;
+        GameManager.instance.onFail();
         explosion.Play();
         Instantiate(deathEffect, transform.position, transform.rotation);
         Instantiate(deathEffect, ball.transform.position, ball.transform.rotation);
         animator.Play("death");
         Destroy(ball);
-        GameManager.instance.onFail();
     }
 
     private IEnumerator JumpTimer()

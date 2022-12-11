@@ -90,10 +90,7 @@ public class Ball : MonoBehaviour
         {
             isForceOk = true;
         }
-        if (other.gameObject.CompareTag("House"))
-        {
-            GameManager.instance.onSuccess();
-        }
+
 
         if (other.gameObject.CompareTag("Racket") || other.gameObject.CompareTag("Ground"))
         {
@@ -106,7 +103,11 @@ public class Ball : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Fan Wind"))
         {
-            _rigidbody.AddForce(new Vector3(-7,0,0));
+            _rigidbody.AddForce(new Vector3(-5,0,0));
+        }
+        if (other.gameObject.CompareTag("House"))
+        {
+            GameManager.instance.onSuccess();
         }
     }
     

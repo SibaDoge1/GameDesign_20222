@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    // ½Ì±ÛÅÏ
+    // ï¿½Ì±ï¿½ï¿½ï¿½
     public static GameManager instance;
     [SerializeField]
     private Player player;
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // ´Ù½Ã °ÔÀÓ ½ÃÀÛ
+        // ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (Input.GetKeyDown("r"))
         {
             onRestartClicked();
@@ -75,17 +75,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // ¼º°øÇßÀ» ¶§ È£Ãâ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½
     public void onSuccess()
     {
+        if (instance.isEnd) return;
         isEnd = true;
         successSound.Play();
         successPanel.SetActive(true);
     }
 
-    // ½ÇÆÐÇßÀ» ¶§ È£Ãâ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½
     public void onFail()
     {
+        if (instance.isEnd) return;
         isEnd = true;
         failSound.Play();
         failPanel.SetActive(true);
