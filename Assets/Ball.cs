@@ -27,6 +27,8 @@ public class Ball : MonoBehaviour
     [SerializeField] private GameObject linePrefab;
     [SerializeField]
     private GameObject hitEffect;
+    [SerializeField]
+    private GameObject ball;
     // Start is called before the first frame update
     void Start()
     {
@@ -108,6 +110,7 @@ public class Ball : MonoBehaviour
         if (other.gameObject.CompareTag("House"))
         {
             GameManager.instance.onSuccess();
+            Destroy(ball);
         }
     }
     
