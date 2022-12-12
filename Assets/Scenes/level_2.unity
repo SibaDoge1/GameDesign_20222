@@ -6018,6 +6018,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952342446}
   m_CullTransparentMesh: 0
+--- !u!82 &959020169 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7974926890440747830, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
+  m_PrefabInstance: {fileID: 672376626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &961987784
 GameObject:
   m_ObjectHideFlags: 0
@@ -12840,6 +12845,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 313803581}
     - target: {fileID: 1798722239, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 959020169}
+    - target: {fileID: 1798722239, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1373689214}
@@ -12869,7 +12878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9155609219099807861, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.397
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9155609219099807861, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_LocalPosition.z

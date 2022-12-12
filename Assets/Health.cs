@@ -76,7 +76,7 @@ public class Health : MonoBehaviour
     void Death()
     {
         isDead = true;
-//        explosion.Play();
+        explosion.Play();
         Instantiate(deathEffect, transform.position, transform.rotation);
         Instantiate(deathEffect, player.transform.position, player.transform.rotation);
         animator.Play("death");

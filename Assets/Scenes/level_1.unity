@@ -1130,6 +1130,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 284321916936898405, guid: 620dfba8ed3cda6499892978b040ee38, type: 3}
   m_PrefabInstance: {fileID: 207856862}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &262933877 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7974926890440747830, guid: 6d30ae6f59058ea4790c0d9389de2ac9, type: 3}
+  m_PrefabInstance: {fileID: 672376626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &284089395
 GameObject:
   m_ObjectHideFlags: 0
@@ -11775,6 +11780,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 313803581}
     - target: {fileID: 1798722239, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 262933877}
+    - target: {fileID: 1798722239, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1373689214}
@@ -11790,6 +11799,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a2a5dca12ea6742eb9ebadcb867acc2b, type: 2}
+    - target: {fileID: 6220943024124272144, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220943024124272144, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220943024124272144, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8799385153502760078, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_Name
       value: ball
@@ -11804,7 +11825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9155609219099807861, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.397
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9155609219099807861, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_LocalPosition.z

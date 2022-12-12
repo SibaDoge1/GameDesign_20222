@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource hitAudio;
     [SerializeField] private AudioSource forceAudio;
-    [SerializeField] private AudioSource explosion;
+    //[SerializeField] private AudioSource explosion;
     private LineRenderer line;
     [SerializeField] private GameObject linePrefab;
     [SerializeField]

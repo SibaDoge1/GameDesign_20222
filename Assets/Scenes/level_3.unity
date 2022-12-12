@@ -11445,6 +11445,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 313803581}
     - target: {fileID: 1798722239, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 1798722238}
+    - target: {fileID: 1798722239, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1373689214}
@@ -11474,7 +11478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9155609219099807861, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.397
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9155609219099807861, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11513,6 +11517,11 @@ PrefabInstance:
 --- !u!1 &1798722237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8799385153502760078, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+  m_PrefabInstance: {fileID: 1798722236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1798722238 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4071218265239657518, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
   m_PrefabInstance: {fileID: 1798722236}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1802749421
