@@ -53,7 +53,7 @@ public class Health : MonoBehaviour
         if (other.transform.CompareTag("Ground")&&!isDead)
         {
             //TakeDamage(1);
-            TakeDamage(0);
+            TakeDamage(1);
         }
     }
 

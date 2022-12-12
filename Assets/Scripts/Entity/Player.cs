@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     private GameObject deathEffect;
     [SerializeField]
     private GameObject ball;
+    [SerializeField]
+    private GameObject player;
     [SerializeField] private AudioSource explosion;
     private bool isOnThorn;
     private bool isInFire;
@@ -81,13 +83,13 @@ public class Player : MonoBehaviour
         {
             die();
         }
+
     }
 
     private void OnCollisionStay(Collision other)
     {
         if (other.transform.CompareTag("Ground"))
         {
-            Debug.Log("ground");
             isGrounded = true;
             if(isSpacePressed)
                 Jump();

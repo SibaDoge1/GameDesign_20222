@@ -14,6 +14,7 @@ TagManager:
   - Fan Blade
   - House
   - Fan Wind
+  - Column
   layers:
   - Default
   - TransparentFX

@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
     
     public void onRestartClicked()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void onResumeClicked()
@@ -107,6 +108,7 @@ public class GameManager : MonoBehaviour
 
     public void onTitleClicked()
     {
+        Time.timeScale = 1;
         loadingPanel.SetActive(true);
         SceneManager.LoadScene("Main");
     }
