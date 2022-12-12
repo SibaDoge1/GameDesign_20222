@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08423816, g: 0.13627149, b: 0.2452534, a: 1}
+  m_IndirectSpecularColor: {r: 0.08423817, g: 0.1362715, b: 0.24525341, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4550,6 +4550,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.34
       objectReference: {fileID: 0}
+    - target: {fileID: 4653614319448710, guid: cb81c6274498c428fbac535c1c5de3e4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.473
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653614319448710, guid: cb81c6274498c428fbac535c1c5de3e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653614319448710, guid: cb81c6274498c428fbac535c1c5de3e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.586
+      objectReference: {fileID: 0}
+    - target: {fileID: 64350122320753790, guid: cb81c6274498c428fbac535c1c5de3e4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb81c6274498c428fbac535c1c5de3e4, type: 3}
 --- !u!4 &836183751 stripped
@@ -4568,7 +4584,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 6.18, z: 10}
+  m_Size: {x: 3, y: 1, z: 10}
   m_Center: {x: -3.04, y: 3.34, z: 1.77}
 --- !u!1 &847276877
 GameObject:
@@ -11432,6 +11448,10 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 511921427}
+    - target: {fileID: 1730256026080813452, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 1798722237}
     - target: {fileID: 8799385153502760078, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_Name
       value: ball

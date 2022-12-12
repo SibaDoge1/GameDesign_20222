@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08423816, g: 0.13627149, b: 0.2452534, a: 1}
+  m_IndirectSpecularColor: {r: 0.08423817, g: 0.1362715, b: 0.24525341, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4625,6 +4625,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.34
       objectReference: {fileID: 0}
+    - target: {fileID: 64350122320753790, guid: cb81c6274498c428fbac535c1c5de3e4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb81c6274498c428fbac535c1c5de3e4, type: 3}
 --- !u!4 &836183751 stripped
@@ -4643,7 +4647,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 6.18, z: 10}
+  m_Size: {x: 3, y: 1, z: 10}
   m_Center: {x: -3.04, y: 3.34, z: 1.77}
 --- !u!1 &847276877
 GameObject:
@@ -6491,7 +6495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099735941}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.07, y: 1.95, z: 0}
+  m_LocalPosition: {x: 4, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10396,7 +10400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310590546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.03, y: 2.99, z: 0}
+  m_LocalPosition: {x: 3, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11766,6 +11770,10 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 511921427}
+    - target: {fileID: 1730256026080813452, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 1798722237}
     - target: {fileID: 8799385153502760078, guid: a0f0035c1ecc24c49aca1416ac48c548, type: 3}
       propertyPath: m_Name
       value: ball
@@ -12090,7 +12098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955835922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.05, y: 0.97, z: 0}
+  m_LocalPosition: {x: 5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12410,7 +12418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1284874774, guid: c1cf665e4cff5be48a29db957865fc7c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.23
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1284874774, guid: c1cf665e4cff5be48a29db957865fc7c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12496,7 +12504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108986501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.03, y: -0.01, z: 0}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
